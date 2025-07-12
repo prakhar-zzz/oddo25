@@ -4,6 +4,6 @@ flask_login
 flask_wtf
 wtforms
 email-validator
-pymongo
-flask-pymongo
-
+flask_pymongo
+dnspython
+python-dotenv
