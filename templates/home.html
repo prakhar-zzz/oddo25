@@ -137,7 +137,24 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   </body>
+=======
+  </header>
+
+  <section class="featured-items">
+    <h2>Featured Items</h2>
+    <div class="items-grid">
+      {% for item in featured_items %}
+      <div class="item-card">{{ item.title }} - {{ item.category }}</div>
+      {% else %}
+      <div>No featured items available.</div>
+      {% endfor %}
+    </div>
+  </section>
+
+</body>
+>>>>>>> 3e71ced3802fee4e954d2b662e4326426127b12c
 </html>
 
 
