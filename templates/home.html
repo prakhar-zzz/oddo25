@@ -20,11 +20,11 @@
   <section class="featured-items">
     <h2>Featured Items</h2>
     <div class="items-grid">
-      <!-- These can be dynamically populated -->
-      <div class="item-card">👕 T-Shirt</div>
-      <div class="item-card">👖 Jeans</div>
-      <div class="item-card">👗 Dress</div>
-      <div class="item-card">🧥 Jacket</div>
+      {% for item in featured_items %}
+      <div class="item-card">{{ item.title }} - {{ item.category }}</div>
+      {% else %}
+      <div>No featured items available.</div>
+      {% endfor %}
     </div>
   </section>
 
