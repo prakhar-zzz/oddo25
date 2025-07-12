@@ -5,10 +5,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 
 from models import db, User, Item, Swap
-from forms import RegisterForm, LoginForm, ItemForm  # Ensure ItemForm is defined
+from forms import LoginForm, ItemForm  # Ensure your forms file exists and includes LoginForm and ItemForm
 
 app = Flask(__name__)
-app.secret_key = 'super-secret-key'  # Replace with env secret in production
+app.secret_key = 'super-secret-key'  # Replace with environment variable in production
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -62,23 +62,29 @@ def add_item():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    form = RegisterForm()
-    if form.validate_on_submit():
-        if User.query.filter_by(email=form.email.data).first():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password = request.form.get('password')
+        confirm_password = request.form.get('confirm_password')
+
+        if User.query.filter_by(email=email).first():
             flash('Email already exists.', 'danger')
             return redirect(url_for('register'))
 
-        hashed_password = generate_password_hash(form.password.data)
-        new_user = User(
-            username=form.username.data,
-            email=form.email.data,
-            password=hashed_password
-        )
+        if password != confirm_password:
+            flash('Passwords do not match.', 'danger')
+            return redirect(url_for('register'))
+
+        hashed_password = generate_password_hash(password)
+        new_user = User(username=username, email=email, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
+
         flash('Account created successfully!', 'success')
-        return redirect(url_for('login'))
-    return render_template('register.html', form=form)
+        return redirect(url_for('home'))
+
+    return render_template('register.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -89,7 +95,7 @@ def login():
         if user and check_password_hash(user.password, form.password.data):
             login_user(user)
             flash('Logged in successfully!', 'success')
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('home'))  # ✅ Fixed redirection
         else:
             flash('Invalid email or password', 'danger')
     return render_template('login.html', form=form)
@@ -118,6 +124,7 @@ def swap_request(item_id):
     if item.user_id == current_user.id:
         flash("You can't request your own item.", 'warning')
         return redirect(url_for('dashboard'))
+
     if not item.available or not item.approved:
         flash("Item not available.", 'danger')
         return redirect(url_for('dashboard'))
@@ -204,6 +211,10 @@ def handle_swap(swap_id, action):
     flash(f"Swap {action}d successfully.", 'success')
     return redirect(url_for('my_swap_requests'))
 
+@app.route('/item/<int:item_id>')
+def item_detail(item_id):
+    item = Item.query.get_or_404(item_id)
+    return render_template('itemlisting.html', item=item)
 
 if __name__ == '__main__':
     with app.app_context():
