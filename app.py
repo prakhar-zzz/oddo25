@@ -84,6 +84,13 @@ def login():
 def dashboard():
     return render_template('dashboard.html', user=current_user)
 
+# --------------------
+# Home Page 
+# --------------------
+@app.route('/landing')
+def landing():
+    return render_template('landing.html')
+
 
 # --------------------
 # Logout

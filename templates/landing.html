@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to ReWear</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="landing-page">
+
+  <header class="landing-header">
+    <h1>♻️ Welcome to <span>ReWear</span></h1>
+    <p>Exchange clothes. Earn points. Save the planet.</p>
+    <div class="cta-buttons">
+      <a href="{{ url_for('login') }}" class="btn">Start Swapping</a>
+      <a href="{{ url_for('browse') }}" class="btn">Browse Items</a>
+      <a href="{{ url_for('add_item') }}" class="btn">List an Item</a>
+    </div>
+  </header>
+
+  <section class="featured-items">
+    <h2>Featured Items</h2>
+    <div class="items-grid">
+      <!-- These can be dynamically populated -->
+      <div class="item-card">👕 T-Shirt</div>
+      <div class="item-card">👖 Jeans</div>
+      <div class="item-card">👗 Dress</div>
+      <div class="item-card">🧥 Jacket</div>
+    </div>
+  </section>
+
+</body>
+</html>
