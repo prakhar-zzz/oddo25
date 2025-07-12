@@ -1,100 +1,124 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <meta charset="UTF-8" />
+    <title>ReWear - Register</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       as="style"
       onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;700;800"
     />
-
-    <title>Stitch Design</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f4f3] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#121615]">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-            <h2 class="text-[#121615] text-lg font-bold leading-tight tracking-[-0.015em]">ReWear</h2>
-          </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
-            <div class="w-full" style="height: 40px;"></div>
-            <div class="flex p-4 @container">
-              <div class="flex w-full flex-col gap-4 items-center">
-                <div class="flex gap-4 flex-col items-center">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB4vfnyBMUMkTT_UZRbjRAAScVU3y6kiE9iT0PTMi0_hfKTRGQ_r9GGEKpBKf8xWaLPw2X1MngoZ4noh0k-PBipr5y2g_pNFYufLQ7kEoBMTN4jq7ejstXmijyXs_7NzUbhNllBu9c84nDjK7WOljMM3PxcLsPWS3GIeKFrrjE1yGz2PENxA40PqAu4PeWbL1dsEk36ajYd98-ZXwjui04XW_E4CgZHUlMvnLX9T2QkI-aBY0sfUBmtZrrRm_MyX1hCMhhA47NawdTx");'
-                  ></div>
-                  <p class="text-[#121615] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">ReWear</p>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#121615] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Create your account</h2>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#121615] text-base font-medium leading-normal pb-2">Username</p>
-                <input
-                  placeholder="Enter your username"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121615] focus:outline-0 focus:ring-0 border border-[#dde3e1] bg-white focus:border-[#dde3e1] h-14 placeholder:text-[#6a8179] p-[15px] text-base font-normal leading-normal"
-                  value=""
-                />
-              </label>
-            </div>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#121615] text-base font-medium leading-normal pb-2">Email</p>
-                <input
-                  placeholder="Enter your email"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121615] focus:outline-0 focus:ring-0 border border-[#dde3e1] bg-white focus:border-[#dde3e1] h-14 placeholder:text-[#6a8179] p-[15px] text-base font-normal leading-normal"
-                  value=""
-                />
-              </label>
-            </div>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#121615] text-base font-medium leading-normal pb-2">Password</p>
-                <input
-                  placeholder="Enter your password"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121615] focus:outline-0 focus:ring-0 border border-[#dde3e1] bg-white focus:border-[#dde3e1] h-14 placeholder:text-[#6a8179] p-[15px] text-base font-normal leading-normal"
-                  value=""
-                />
-              </label>
-            </div>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#121615] text-base font-medium leading-normal pb-2">Confirm Password</p>
-                <input
-                  placeholder="Confirm your password"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121615] focus:outline-0 focus:ring-0 border border-[#dde3e1] bg-white focus:border-[#dde3e1] h-14 placeholder:text-[#6a8179] p-[15px] text-base font-normal leading-normal"
-                  value=""
-                />
-              </label>
-            </div>
-            <div class="flex px-4 py-3">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 flex-1 bg-[#dcf3eb] text-[#121615] text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Register</span>
-              </button>
-            </div>
-            <p class="text-[#6a8179] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center">Already have an account? &lt;a href="/login"&gt;Login&lt;/a&gt;</p>
-          </div>
+
+  <body
+    class="bg-white min-h-screen flex flex-col overflow-x-hidden"
+    style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'
+  >
+    <!-- Navbar (copied from login page) -->
+    <header
+      class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f4f3] px-10 py-3"
+    >
+      <div class="flex items-center gap-4 text-[#121615]">
+        <div class="size-4">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+              fill="currentColor"
+            />
+          </svg>
         </div>
+        <h2 class="text-[#121615] text-lg font-bold leading-tight tracking-[-0.015em]">
+          ReWear
+        </h2>
       </div>
-    </div>
+      <div class="flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9">
+          <a class="text-[#121615] text-sm font-medium leading-normal" href="#">About</a>
+          <a class="text-[#121615] text-sm font-medium leading-normal" href="#">How it works</a>
+          <a class="text-[#121615] text-sm font-medium leading-normal" href="#">Contact</a>
+        </div>
+        <button
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f1f4f3] text-[#121615] text-sm font-bold leading-normal tracking-[0.015em]"
+        >
+          <span class="truncate">Sign up</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Form Section -->
+    <main class="flex-1 flex justify-center py-10 px-4">
+      <div class="w-full max-w-lg flex flex-col items-center">
+        <!-- Circle Image -->
+        <div
+          class="w-32 h-32 bg-cover bg-center rounded-full mb-6 border"
+          style="background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=500&h=500&q=60');"
+        ></div>
+
+        <!-- Title -->
+        <h1 class="text-2xl font-bold text-[#121615] mb-4">Create your account</h1>
+
+        <!-- Form -->
+        <form class="w-full space-y-4 px-4">
+          <!-- Username -->
+          <div>
+            <label class="block text-[#121615] font-medium mb-1">Username</label>
+            <input
+              type="text"
+              placeholder="Enter your username"
+              class="w-full h-14 p-[15px] rounded-xl border border-[#dde3e1] placeholder:text-[#6a8179] focus:outline-none focus:border-[#dde3e1]"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label class="block text-[#121615] font-medium mb-1">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full h-14 p-[15px] rounded-xl border border-[#dde3e1] placeholder:text-[#6a8179] focus:outline-none focus:border-[#dde3e1]"
+            />
+          </div>
+
+          <!-- Password -->
+          <div>
+            <label class="block text-[#121615] font-medium mb-1">Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              class="w-full h-14 p-[15px] rounded-xl border border-[#dde3e1] placeholder:text-[#6a8179] focus:outline-none focus:border-[#dde3e1]"
+            />
+          </div>
+
+          <!-- Confirm Password -->
+          <div>
+            <label class="block text-[#121615] font-medium mb-1">Confirm Password</label>
+            <input
+              type="password"
+              placeholder="Confirm your password"
+              class="w-full h-14 p-[15px] rounded-xl border border-[#dde3e1] placeholder:text-[#6a8179] focus:outline-none focus:border-[#dde3e1]"
+            />
+          </div>
+
+          <!-- Register Button -->
+          <div>
+            <button
+              type="submit"
+              class="w-full h-10 bg-[#dcf3eb] text-[#121615] font-bold rounded-full hover:opacity-90 transition duration-200"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+
+        <!-- Redirect to Login -->
+        <p class="text-sm text-[#6a8179] mt-4">
+          Already have an account?
+          <a href="/login" class="underline text-[#121615] font-medium">Login</a>
+        </p>
+      </div>
+    </main>
   </body>
 </html>
